@@ -3,7 +3,11 @@
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
-import questions from "./Questions.json" assert { type: "json" }; 
+//import questions from "./Questions.json";
+
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const questions = require("./Questions.json");
 
 const app = express();
 const PORT = 3000;
