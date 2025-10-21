@@ -6,7 +6,7 @@ import bodyParser from "body-parser";
 import questions from "./Questions.json" assert { type: "json" }; 
 
 const app = express();
-const PORT = 3000;
+const PORT = 4000;
 
 
 // efficient shuffling algorithm (similar to Fisher-Yates)
