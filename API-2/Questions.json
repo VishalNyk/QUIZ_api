@@ -1,0 +1,1202 @@
+[
+    {
+        "id": 1,
+        "question": "Which React Hook is used for side effects, such as data fetching or subscriptions?",
+        "options": [
+            "useState",
+            "useContext",
+            "useEffect",
+            "useMemo"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "The `useEffect` Hook lets you perform side effects in functional components. It is commonly used for data fetching, manually changing the DOM, and setting up subscriptions."
+    },
+    {
+        "id": 2,
+        "question": "Which Hook should you use to manage state in a functional component?",
+        "options": [
+            "useEffect",
+            "useContext",
+            "useState",
+            "useReducer"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "The `useState` Hook is specifically designed to add state management capabilities to functional components, allowing them to preserve values between renders."
+    },
+    {
+        "id": 3,
+        "question": "What is the purpose of the dependency array in useEffect?",
+        "options": [
+            "To specify which props to watch",
+            "To list all variables the effect depends on",
+            "To define cleanup functions",
+            "To set the execution priority"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "The dependency array controls when the effect runs. If any value in the array changes between renders, the effect will re-run. An empty array means the effect runs only once after initial render."
+    },
+    {
+        "id": 4,
+        "question": "Which Hook is used for performance optimization by memoizing expensive calculations?",
+        "options": [
+            "useCallback",
+            "useMemo",
+            "useRef",
+            "useReducer"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "`useMemo` memoizes the result of expensive calculations and only recalculates when its dependencies change, preventing unnecessary recomputations on every render."
+    },
+    {
+        "id": 5,
+        "question": "How do you access context values in a functional component?",
+        "options": [
+            "useContext",
+            "useContextValue",
+            "useContextProvider",
+            "Context.Consumer"
+        ],
+        "correctOptionIndex": 0,
+        "explanation": "The `useContext` Hook accepts a context object and returns the current context value for that context, allowing functional components to consume context without a Consumer wrapper."
+    },
+    {
+        "id": 6,
+        "question": "Which Hook is used to persist values across renders without causing re-renders?",
+        "options": [
+            "useState",
+            "useMemo",
+            "useRef",
+            "useCallback"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "`useRef` returns a mutable ref object that persists for the lifetime of the component. Changing its `.current` property doesn't trigger a re-render."
+    },
+    {
+        "id": 7,
+        "question": "What does useCallback primarily help optimize?",
+        "options": [
+            "State updates",
+            "Event handler functions",
+            "Component mounting",
+            "API calls"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "`useCallback` memoizes callback functions, preventing unnecessary re-creations of functions on every render, which is especially useful when passing callbacks to optimized child components."
+    },
+    {
+        "id": 8,
+        "question": "Which Hook is an alternative to useState for complex state logic?",
+        "options": [
+            "useEffect",
+            "useContext",
+            "useReducer",
+            "useMemo"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "`useReducer` is usually preferable to `useState` when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one."
+    },
+    {
+        "id": 9,
+        "question": "What is the correct way to update state based on previous state?",
+        "options": [
+            "setState(newValue)",
+            "setState(prevState => newValue)",
+            "state = newValue",
+            "this.setState(newValue)"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "When the new state depends on the previous state, you should use the functional update form: `setState(prevState => newValue)` to ensure you're working with the most current state."
+    },
+    {
+        "id": 10,
+        "question": "Which method is used to conditionally render components in JSX?",
+        "options": [
+            "if-else statements",
+            "switch statements",
+            "ternary operators",
+            "for loops"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "Ternary operators (`condition ? trueValue : falseValue`) are commonly used in JSX for conditional rendering because they can be embedded directly in the JSX expression."
+    },
+    {
+        "id": 11,
+        "question": "What is the purpose of keys in React lists?",
+        "options": [
+            "To improve styling",
+            "To help React identify which items have changed",
+            "To enable sorting",
+            "To add accessibility"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "Keys help React identify which items have changed, are added, or are removed, allowing for efficient re-rendering of lists by minimizing DOM operations."
+    },
+    {
+        "id": 12,
+        "question": "Which lifecycle method is equivalent to useEffect with empty dependency array?",
+        "options": [
+            "componentDidMount",
+            "componentDidUpdate",
+            "componentWillUnmount",
+            "shouldComponentUpdate"
+        ],
+        "correctOptionIndex": 0,
+        "explanation": "`useEffect` with an empty dependency array `[]` runs after the initial render, making it equivalent to `componentDidMount` in class components."
+    },
+    {
+        "id": 13,
+        "question": "What does the useImperativeHandle Hook allow you to do?",
+        "options": [
+            "Create custom Hooks",
+            "Access DOM elements directly",
+            "Customize the instance value exposed to parent components",
+            "Manage global state"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "`useImperativeHandle` customizes the instance value that is exposed to parent components when using `ref`, allowing you to control what methods/properties are accessible."
+    },
+    {
+        "id": 14,
+        "question": "Which pattern is used to share stateful logic between components?",
+        "options": [
+            "Higher-Order Components",
+            "Custom Hooks",
+            "Render Props",
+            "All of the above"
+        ],
+        "correctOptionIndex": 3,
+        "explanation": "React provides multiple patterns for sharing stateful logic: Higher-Order Components, Render Props, and Custom Hooks (which is the most modern and recommended approach)."
+    },
+    {
+        "id": 15,
+        "question": "What is the main benefit of React Fragments?",
+        "options": [
+            "Improved performance",
+            "Ability to return multiple elements without a wrapper",
+            "Better accessibility",
+            "Automatic state management"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "Fragments let you group a list of children without adding extra nodes to the DOM, solving the common pattern of needing to wrap adjacent JSX elements."
+    },
+    {
+        "id": 16,
+        "question": "Which Hook should be used to measure DOM nodes?",
+        "options": [
+            "useState",
+            "useEffect",
+            "useLayoutEffect",
+            "useRef"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "`useLayoutEffect` fires synchronously after all DOM mutations, making it suitable for reading layout from the DOM and synchronously re-rendering before the browser paints."
+    },
+    {
+        "id": 17,
+        "question": "What is the purpose of React.memo?",
+        "options": [
+            "To memoize component props",
+            "To prevent unnecessary re-renders of functional components",
+            "To cache API responses",
+            "To optimize state updates"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "`React.memo` is a higher-order component that memoizes the result, preventing re-renders of functional components when props haven't changed."
+    },
+    {
+        "id": 18,
+        "question": "Which method is used to update state in response to form inputs?",
+        "options": [
+            "onChange event handler",
+            "onSubmit event handler",
+            "onClick event handler",
+            "onBlur event handler"
+        ],
+        "correctOptionIndex": 0,
+        "explanation": "The `onChange` event handler is typically used with form inputs to update component state as the user types, creating controlled components."
+    },
+    {
+        "id": 19,
+        "question": "What does the useDebugValue Hook do?",
+        "options": [
+            "Finds bugs in your code",
+            "Displays custom labels for custom Hooks in React DevTools",
+            "Logs debug information to console",
+            "Validates prop types"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "`useDebugValue` can be used to display a custom label for custom Hooks in React DevTools, making custom Hook debugging easier."
+    },
+    {
+        "id": 20,
+        "question": "Which pattern is recommended for code splitting in React?",
+        "options": [
+            "React.lazy with Suspense",
+            "Dynamic imports with require()",
+            "Webpack chunk splitting",
+            "Manual component loading"
+        ],
+        "correctOptionIndex": 0,
+        "explanation": "`React.lazy` combined with `Suspense` is the recommended way to implement code splitting for components, allowing you to load components only when they're needed."
+    },
+    {
+        "id": 21,
+        "question": "What is the main advantage of using controlled components?",
+        "options": [
+            "Better performance",
+            "Form data is handled by React component state",
+            "Easier validation",
+            "Smaller bundle size"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "In controlled components, form data is handled by the React component state, providing a single source of truth and making it easier to implement features like validation and dynamic form behavior."
+    },
+    {
+        "id": 22,
+        "question": "Which Hook is designed to handle side effects that need cleanup?",
+        "options": [
+            "useState",
+            "useEffect with return function",
+            "useMemo",
+            "useCallback"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "`useEffect` can return a cleanup function that runs before the component is removed from the UI and before re-running the effect due to dependency changes."
+    },
+    {
+        "id": 23,
+        "question": "What is the purpose of the children prop?",
+        "options": [
+            "To pass child components",
+            "To access component's own children",
+            "To render content between opening and closing tags",
+            "All of the above"
+        ],
+        "correctOptionIndex": 3,
+        "explanation": "The `children` prop allows components to be passed as children to other components, accessed within the parent component, and rendered between opening and closing tags."
+    },
+    {
+        "id": 24,
+        "question": "Which method is used to optimize performance by preventing unnecessary renders?",
+        "options": [
+            "React.memo for functional components",
+            "shouldComponentUpdate for class components",
+            "PureComponent for class components",
+            "All of the above"
+        ],
+        "correctOptionIndex": 3,
+        "explanation": "React provides multiple optimization techniques: `React.memo` for functional components, `shouldComponentUpdate` and `PureComponent` for class components to prevent unnecessary re-renders."
+    },
+    {
+        "id": 25,
+        "question": "What is the correct way to handle events in React?",
+        "options": [
+            "Using addEventListener",
+            "Using inline HTML event attributes",
+            "Using camelCase React event handlers",
+            "Using jQuery event binding"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "React uses camelCase event handlers (like `onClick`, `onChange`) rather than lowercase, and these are passed as props to React elements rather than using traditional DOM event handling."
+    },
+    {
+        "id": 26,
+        "question": "Which Hook would you use to integrate with external state management?",
+        "options": [
+            "useState",
+            "useReducer",
+            "useContext",
+            "Any of the above depending on needs"
+        ],
+        "correctOptionIndex": 3,
+        "explanation": "While React's built-in Hooks handle most state needs, integration with external state management can be achieved using any appropriate Hook depending on the specific requirements and library being used."
+    },
+    {
+        "id": 27,
+        "question": "What is the output of `typeof null` in JavaScript?",
+        "options": [
+            "null",
+            "undefined",
+            "object",
+            "number"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "`typeof null` returns 'object' which is a known quirk in JavaScript. This behavior is from the early days of JavaScript and is maintained for backward compatibility."
+    },
+    {
+        "id": 28,
+        "question": "Which method is used to add one or more elements to the end of an array?",
+        "options": [
+            "push()",
+            "pop()",
+            "shift()",
+            "unshift()"
+        ],
+        "correctOptionIndex": 0,
+        "explanation": "The `push()` method adds one or more elements to the end of an array and returns the new length of the array."
+    },
+    {
+        "id": 29,
+        "question": "What does the `===` operator check that `==` does not?",
+        "options": [
+            "Value equality only",
+            "Type and value equality",
+            "Reference equality",
+            "No difference"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "The `===` (strict equality) operator checks both type and value equality, while `==` (loose equality) performs type coercion before comparison."
+    },
+    {
+        "id": 30,
+        "question": "What is a closure in JavaScript?",
+        "options": [
+            "A function that has no name",
+            "A function that remembers its lexical scope",
+            "A way to close a program",
+            "A method for memory cleanup"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "A closure is a function that has access to variables in its outer (enclosing) scope even after the outer function has returned. It 'remembers' the environment in which it was created."
+    },
+    {
+        "id": 31,
+        "question": "What will `console.log(1 + '1')` output?",
+        "options": [
+            "2",
+            "11",
+            "NaN",
+            "undefined"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "JavaScript performs type coercion when using `+` with a string and number. The number is converted to a string, resulting in string concatenation: '1' + '1' = '11'."
+    },
+    {
+        "id": 32,
+        "question": "Which method creates a new array with all elements that pass a test?",
+        "options": [
+            "map()",
+            "filter()",
+            "reduce()",
+            "forEach()"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "The `filter()` method creates a new array with all elements that pass the test implemented by the provided function."
+    },
+    {
+        "id": 33,
+        "question": "What is the purpose of the `this` keyword?",
+        "options": [
+            "Refers to the current function",
+            "Refers to the global object",
+            "Refers to the object that owns the executing function",
+            "Refers to the parent object"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "The value of `this` depends on how a function is called. In most cases, it refers to the object that owns the method being executed."
+    },
+    {
+        "id": 34,
+        "question": "What does the `let` keyword provide that `var` does not?",
+        "options": [
+            "Global scope",
+            "Function scope",
+            "Block scope",
+            "No difference"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "`let` provides block-level scoping, meaning variables declared with `let` are only accessible within the block they're defined in, unlike `var` which has function scope."
+    },
+    {
+        "id": 35,
+        "question": "Which method is used to convert a JSON string to a JavaScript object?",
+        "options": [
+            "JSON.parse()",
+            "JSON.stringify()",
+            "JSON.convert()",
+            "JSON.toObject()"
+        ],
+        "correctOptionIndex": 0,
+        "explanation": "`JSON.parse()` parses a JSON string and constructs the JavaScript value or object described by the string."
+    },
+    {
+        "id": 36,
+        "question": "What is the result of `Boolean('false')`?",
+        "options": [
+            "false",
+            "true",
+            "undefined",
+            "NaN"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "Any non-empty string is truthy in JavaScript. `Boolean('false')` returns `true` because the string 'false' is not empty, even though its content is the word 'false'."
+    },
+    {
+        "id": 37,
+        "question": "Which array method executes a reducer function and returns a single value?",
+        "options": [
+            "map()",
+            "filter()",
+            "reduce()",
+            "find()"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "The `reduce()` method executes a reducer function on each element of the array, resulting in a single output value."
+    },
+    {
+        "id": 38,
+        "question": "What is event delegation in JavaScript?",
+        "options": [
+            "Creating multiple event listeners",
+            "Attaching event listener to parent to handle child events",
+            "Delegating events to another function",
+            "Removing event listeners"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "Event delegation involves attaching a single event listener to a parent element to handle events that occur on its child elements, leveraging event bubbling for better performance."
+    },
+    {
+        "id": 39,
+        "question": "What will `console.log(0.1 + 0.2 === 0.3)` output?",
+        "options": [
+            "true",
+            "false",
+            "undefined",
+            "NaN"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "Due to floating-point precision issues in JavaScript, `0.1 + 0.2` equals approximately `0.30000000000000004`, not exactly `0.3`, so the comparison returns `false`."
+    },
+    {
+        "id": 40,
+        "question": "Which method removes the first element from an array?",
+        "options": [
+            "pop()",
+            "shift()",
+            "slice()",
+            "splice()"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "The `shift()` method removes the first element from an array and returns that removed element, changing the length of the array."
+    },
+    {
+        "id": 41,
+        "question": "What is a Promise in JavaScript?",
+        "options": [
+            "A function that returns immediately",
+            "An object representing eventual completion/failure of async operation",
+            "A type of variable",
+            "A conditional statement"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "A Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value."
+    },
+    {
+        "id": 42,
+        "question": "What does the `bind()` method do?",
+        "options": [
+            "Binds two objects together",
+            "Creates a new function with specified `this` value",
+            "Binds event listeners",
+            "Connects variables"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "The `bind()` method creates a new function that, when called, has its `this` keyword set to the provided value, with optional pre-specified initial arguments."
+    },
+    {
+        "id": 43,
+        "question": "Which operator is used for optional chaining?",
+        "options": [
+            "??",
+            "?.",
+            "::",
+            "->"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "The optional chaining operator `?.` allows you to read the value of a property located deep within a chain of connected objects without having to check each reference in the chain."
+    },
+    {
+        "id": 44,
+        "question": "What is the purpose of the `use strict` directive?",
+        "options": [
+            "Makes JavaScript run faster",
+            "Enables stricter parsing and error handling",
+            "Forces variable declarations",
+            "Both B and C"
+        ],
+        "correctOptionIndex": 3,
+        "explanation": "`'use strict'` enables strict mode which catches common coding errors and prevents the use of certain error-prone features. It requires variables to be declared and throws errors for unsafe actions."
+    },
+    {
+        "id": 45,
+        "question": "Which method creates a new array with the results of calling a function on every element?",
+        "options": [
+            "forEach()",
+            "map()",
+            "filter()",
+            "reduce()"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "The `map()` method creates a new array populated with the results of calling a provided function on every element in the calling array."
+    },
+    {
+        "id": 46,
+        "question": "What is the difference between `null` and `undefined`?",
+        "options": [
+            "No difference",
+            "null is assigned, undefined is default",
+            "undefined is assigned, null is default",
+            "Both represent empty values"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "`undefined` means a variable has been declared but hasn't been assigned a value. `null` is an assignment value that represents no value or no object."
+    },
+    {
+        "id": 47,
+        "question": "What is the primary purpose of middleware in Express.js?",
+        "options": [
+            "Database operations",
+            "Handling requests and responses",
+            "Template rendering",
+            "File system operations"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "Middleware functions are functions that have access to the request object (req), response object (res), and the next middleware function in the application's request-response cycle. They can execute code, modify req/res objects, end the cycle, or call the next middleware."
+    },
+    {
+        "id": 48,
+        "question": "Which method is used to start a Node.js server?",
+        "options": [
+            "app.start()",
+            "app.listen()",
+            "server.run()",
+            "app.run()"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "The `app.listen()` method binds and listens for connections on the specified host and port. It's identical to Node's http.Server.listen() method and is used to start the Express server."
+    },
+    {
+        "id": 49,
+        "question": "What does the `require()` function do in Node.js?",
+        "options": [
+            "Import ES6 modules",
+            "Load and cache JavaScript modules",
+            "Make HTTP requests",
+            "Validate environment variables"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "The `require()` function is used in Node.js to import modules. It reads a JavaScript file, executes the file, and returns the exports object. Modules are cached after the first time they are loaded."
+    },
+    {
+        "id": 50,
+        "question": "Which Express method is used to handle GET requests?",
+        "options": [
+            "app.get()",
+            "app.post()",
+            "app.use()",
+            "app.route()"
+        ],
+        "correctOptionIndex": 0,
+        "explanation": "The `app.get()` method routes HTTP GET requests to the specified path with the specified callback functions. It's used to handle GET requests in Express applications."
+    },
+    {
+        "id": 51,
+        "question": "What is the purpose of the `next` function in Express middleware?",
+        "options": [
+            "Move to next route",
+            "Pass control to next middleware",
+            "Skip error handling",
+            "End request-response cycle"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "The `next` function is a callback that passes control to the next middleware function in the stack. If not called, the request will be left hanging and the client won't receive a response."
+    },
+    {
+        "id": 52,
+        "question": "Which module is built into Node.js for file system operations?",
+        "options": [
+            "fs",
+            "file",
+            "path",
+            "os"
+        ],
+        "correctOptionIndex": 0,
+        "explanation": "The `fs` module provides an API for interacting with the file system. It includes methods for reading, writing, updating, and deleting files, both synchronously and asynchronously."
+    },
+    {
+        "id": 53,
+        "question": "How do you access URL parameters in Express.js?",
+        "options": [
+            "req.body",
+            "req.query",
+            "req.params",
+            "req.url"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "URL parameters are accessible via `req.params` object. For example, in route `/users/:id`, the id parameter can be accessed as `req.params.id`."
+    },
+    {
+        "id": 54,
+        "question": "What is the purpose of the package.json file in Node.js?",
+        "options": [
+            "Server configuration",
+            "Database schema",
+            "Project metadata and dependencies",
+            "Environment variables"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "The package.json file holds various metadata relevant to the project, including project name, version, description, scripts, and most importantly, the list of dependencies required for the project to run."
+    },
+    {
+        "id": 55,
+        "question": "Which middleware is commonly used to parse JSON bodies in Express?",
+        "options": [
+            "express.json()",
+            "body-parser",
+            "cookie-parser",
+            "express.static()"
+        ],
+        "correctOptionIndex": 0,
+        "explanation": "`express.json()` is built-in Express middleware that parses incoming requests with JSON payloads. It's based on body-parser and available in Express 4.16.0+."
+    },
+    {
+        "id": 56,
+        "question": "What does process.env contain in Node.js?",
+        "options": [
+            "Package dependencies",
+            "Environment variables",
+            "Server configuration",
+            "File system paths"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "`process.env` returns an object containing the user environment. It's commonly used to access environment variables like port numbers, database URLs, and API keys."
+    },
+    {
+        "id": 57,
+        "question": "Which method is used to serve static files in Express?",
+        "options": [
+            "app.static()",
+            "express.static()",
+            "app.serve()",
+            "express.files()"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "`express.static()` is the built-in middleware function in Express that serves static files such as images, CSS files, and JavaScript files."
+    },
+    {
+        "id": 58,
+        "question": "What is the Event Loop in Node.js?",
+        "options": [
+            "File system watcher",
+            "Database connection pool",
+            "Mechanism for handling asynchronous operations",
+            "HTTP request handler"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "The Event Loop is what allows Node.js to perform non-blocking I/O operations despite being single-threaded, by offloading operations to the system kernel whenever possible."
+    },
+    {
+        "id": 59,
+        "question": "How do you handle errors in Express route handlers?",
+        "options": [
+            "try-catch blocks",
+            "Error-first callbacks",
+            "Middleware with 4 parameters",
+            "All of the above"
+        ],
+        "correctOptionIndex": 3,
+        "explanation": "Express provides multiple error handling mechanisms: try-catch for synchronous code, error-first callbacks for asynchronous operations, and special error-handling middleware functions with 4 parameters (err, req, res, next)."
+    },
+    {
+        "id": 60,
+        "question": "What is the purpose of the __dirname variable in Node.js?",
+        "options": [
+            "Current working directory",
+            "Directory name of current module",
+            "Root directory path",
+            "Temporary directory path"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "`__dirname` returns the directory name of the current module. This is different from `process.cwd()` which returns the current working directory of the Node.js process."
+    },
+    {
+        "id": 61,
+        "question": "Which HTTP status code should be returned for a successful POST request that creates a resource?",
+        "options": [
+            "200 OK",
+            "201 Created",
+            "204 No Content",
+            "302 Found"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "HTTP status code 201 Created is the appropriate response for a successful POST request that resulted in a resource being created. It often includes a Location header pointing to the new resource."
+    },
+    {
+        "id": 62,
+        "question": "What is the purpose of the morgan middleware in Express?",
+        "options": [
+            "Authentication",
+            "Request logging",
+            "Data validation",
+            "Rate limiting"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "Morgan is a popular HTTP request logger middleware for Node.js. It simplifies the process of logging requests to your application and can be configured with various predefined formats or custom formats."
+    },
+    {
+        "id": 63,
+        "question": "How do you access query string parameters in Express?",
+        "options": [
+            "req.body",
+            "req.query",
+            "req.params",
+            "req.search"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "Query string parameters (after the ? in the URL) are accessible via the `req.query` object. For example, in `/users?name=john`, `req.query.name` would be 'john'."
+    },
+    {
+        "id": 64,
+        "question": "What is the CommonJS module system?",
+        "options": [
+            "ES6 import/export",
+            "Node.js module system using require/exports",
+            "Browser module standard",
+            "TypeScript module system"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "CommonJS is the module system used by Node.js, which employs `require()` to import modules and `module.exports` or `exports` to export functionality from a module."
+    },
+    {
+        "id": 65,
+        "question": "Which method is used to redirect responses in Express?",
+        "options": [
+            "res.redirect()",
+            "res.sendRedirect()",
+            "res.forward()",
+            "res.location()"
+        ],
+        "correctOptionIndex": 0,
+        "explanation": "The `res.redirect()` method redirects to the URL derived from the specified path, with a default status code 302 Found. It can also accept absolute URLs, relative paths, or 'back' to redirect to the referrer."
+    },
+    {
+        "id": 66,
+        "question": "What is the purpose of the helmet middleware in Express?",
+        "options": [
+            "Authentication",
+            "Security headers configuration",
+            "Compression",
+            "CORS handling"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "Helmet.js helps secure Express apps by setting various HTTP headers. It's actually a collection of smaller middleware functions that set security-related HTTP headers to protect against common web vulnerabilities."
+    },
+    {
+        "id": 67,
+        "question": "In MongoDB, what is the primary advantage of document embedding over referencing?",
+        "options": [
+            "Reduced storage size",
+            "Better consistency across collections",
+            "Fewer queries/joins required for data retrieval",
+            "Simplified update operations"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "Embedding (or denormalization) places related data within a single document, eliminating the need for application-level joins, which results in fewer queries and faster read operations."
+    },
+    {
+        "id": 68,
+        "question": "Which type of index is automatically created by MongoDB on the _id field of every collection?",
+        "options": [
+            "Hashed index",
+            "Text index",
+            "Unique, clustered index",
+            "Unique, single-field index"
+        ],
+        "correctOptionIndex": 3,
+        "explanation": "MongoDB automatically creates a unique index on the _id field during the creation of a collection to ensure data integrity and efficient lookups."
+    },
+    {
+        "id": 69,
+        "question": "In the MongoDB Aggregation Pipeline, which stage is used to perform a LEFT OUTER JOIN from a different collection?",
+        "options": [
+            "$group",
+            "$match",
+            "$lookup",
+            "$project"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "The $lookup stage performs a left outer join to an unsharded collection in the same database to filter in documents from the joined collection for processing."
+    },
+    {
+        "id": 70,
+        "question": "For MongoDB, multi-document ACID transactions are supported only when operating on a:",
+        "options": [
+            "Standalone MongoDB instance",
+            "Sharded Cluster",
+            "Replica Set",
+            "Secondary node"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "Multi-document transactions in MongoDB are available for replica sets and sharded clusters. Transactions involving multiple documents must be hosted on a replica set."
+    },
+    {
+        "id": 71,
+        "question": "When implementing sharding in MongoDB, what is the most critical element that determines how data is distributed across shards?",
+        "options": [
+            "The Query Router (mongos)",
+            "The Config Servers",
+            "The Shard Key",
+            "The Primary Shard"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "The Shard Key is a field or fields in the documents that MongoDB uses to divide the collection's data into chunks and distribute those chunks across the shards."
+    },
+    {
+        "id": 72,
+        "question": "What is the key criterion for a relational table to satisfy Third Normal Form (3NF)?",
+        "options": [
+            "It must be in 2NF and have no transitive dependencies on the primary key.",
+            "All columns must contain atomic values.",
+            "There must be no repeating groups or arrays.",
+            "Every non-key attribute must be fully dependent on the primary key."
+        ],
+        "correctOptionIndex": 0,
+        "explanation": "A relation is in 3NF if it is in 2NF and no non-prime attribute is transitively dependent on the primary key."
+    },
+    {
+        "id": 73,
+        "question": "Which of the ACID properties ensures that either all changes within a transaction succeed, or none of them do?",
+        "options": [
+            "Atomicity",
+            "Consistency",
+            "Isolation",
+            "Durability"
+        ],
+        "correctOptionIndex": 0,
+        "explanation": "Atomicity means the transaction is treated as a single, indivisible unit of operations. It must fully complete or be fully aborted."
+    },
+    {
+        "id": 74,
+        "question": "In a DBMS, a scenario where two transactions are waiting indefinitely for locks held by the other is known as:",
+        "options": [
+            "Starvation",
+            "Deadlock",
+            "Dirty Read",
+            "Phantom Read"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "Deadlock occurs when two or more transactions are permanently blocked because each is waiting for the other to release a lock."
+    },
+    {
+        "id": 75,
+        "question": "What is the primary purpose of a Foreign Key constraint in a relational database?",
+        "options": [
+            "To uniquely identify a row in a table.",
+            "To enforce relationships between tables (referential integrity).",
+            "To prevent null values in a column.",
+            "To speed up data retrieval operations."
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "A Foreign Key establishes a link between two tables, ensuring that data in the referencing column(s) exists in the referenced column(s) of the parent table."
+    },
+    {
+        "id": 76,
+        "question": "Which SQL command is used to add new attributes (columns) to an existing table in a relational database?",
+        "options": [
+            "CREATE TABLE",
+            "UPDATE TABLE",
+            "INSERT INTO",
+            "ALTER TABLE"
+        ],
+        "correctOptionIndex": 3,
+        "explanation": "The ALTER TABLE statement is used to add, delete, or modify columns in an existing table."
+    },
+    {
+        "id": 77,
+        "question": "What is the key advantage of using the JSONB data type over JSON in PostgreSQL?",
+        "options": [
+            "It preserves the exact formatting and whitespace.",
+            "It supports faster indexing and query processing.",
+            "It allows for larger JSON document sizes.",
+            "It automatically converts all field names to lowercase."
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "JSONB (JSON Binary) stores data in a decomposed binary format, which is slightly slower to insert but significantly faster to process and supports GIN indexing for efficient querying within the JSON data."
+    },
+    {
+        "id": 78,
+        "question": "In PostgreSQL, what are reusable code blocks that can accept parameters and return values, often used to encapsulate complex business logic?",
+        "options": [
+            "Triggers",
+            "Stored Procedures / Functions",
+            "Views",
+            "Indexes"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "Stored Procedures or Functions are database objects that encapsulate a series of SQL statements into a single callable unit, improving security and reusability."
+    },
+    {
+        "id": 79,
+        "question": "What kind of PostgreSQL index is useful for cases where you only need to index a subset of the table's data?",
+        "options": [
+            "B-tree Index",
+            "Partial Index",
+            "Cluster Index",
+            "Unique Index"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "A Partial Index indexes only the rows that satisfy a specified WHERE clause. This reduces the index size and overhead, improving performance for targeted queries."
+    },
+    {
+        "id": 80,
+        "question": "PostgreSQL implements concurrency control primarily using a technique called:",
+        "options": [
+            "Optimistic Locking",
+            "Two-Phase Locking (2PL)",
+            "Multi-Version Concurrency Control (MVCC)",
+            "Global Distributed Lock Manager"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "MVCC allows different transactions to see different 'snapshots' of the data, which minimizes the need for locking reads and typically improves performance."
+    },
+    {
+        "id": 81,
+        "question": "What is the purpose of the VACUUM command in PostgreSQL?",
+        "options": [
+            "To compress data files and free up disk space immediately.",
+            "To recalculate statistics for the query planner.",
+            "To recover storage occupied by dead rows and prevent transaction ID wraparound.",
+            "To perform a full database backup."
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "Due to MVCC, deleted or updated rows become 'dead tuples'. VACUUM removes these dead tuples and makes the space available for reuse."
+    },
+    {
+        "id": 82,
+        "question": "Which SQL transaction isolation level prevents the 'Dirty Read' anomaly?",
+        "options": [
+            "READ UNCOMMITTED",
+            "READ COMMITTED",
+            "REPEATABLE READ",
+            "SERIALIZABLE"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "READ COMMITTED ensures that any data read inside a transaction has been committed by another transaction, thus preventing dirty reads."
+    },
+    {
+        "id": 83,
+        "question": "A logical unit of work that contains one or more SQL statements is defined as a:",
+        "options": [
+            "Session",
+            "Commit",
+            "Transaction",
+            "Schema"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "A transaction is a sequence of operations performed as a single logical unit of work. Its purpose is to ensure data integrity."
+    },
+    {
+        "id": 84,
+        "question": "Which ACID property is primarily ensured by the database's use of non-volatile storage (like disk) and write-ahead logging?",
+        "options": [
+            "Atomicity",
+            "Consistency",
+            "Isolation",
+            "Durability"
+        ],
+        "correctOptionIndex": 3,
+        "explanation": "Durability ensures that once a transaction is committed, its changes are permanent and survive any subsequent system failures (like power loss)."
+    },
+    {
+        "id": 85,
+        "question": "What happens to the changes made during a transaction if the transaction is terminated abnormally (e.g., due to an error)?",
+        "options": [
+            "The changes are partially committed.",
+            "The database automatically enters a standby mode.",
+            "The changes are made permanent and logged.",
+            "The changes are undone and the state is restored (Rollback)."
+        ],
+        "correctOptionIndex": 3,
+        "explanation": "The database performs a ROLLBACK operation, which undoes all the changes made by the transaction to maintain Atomicity and Consistency."
+    },
+    {
+        "id": 86,
+        "question": "Which type of integrity constraint ensures that all values in a column are unique, but allows NULL values?",
+        "options": [
+            "Primary Key",
+            "Foreign Key",
+            "Unique Constraint",
+            "NOT NULL Constraint"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "A Unique Constraint ensures uniqueness but, unlike a Primary Key, it allows one (or more, depending on the DBMS) NULL value because NULL is typically treated as an unknown value and not compared against other NULLs."
+    },
+    {
+        "id": 87,
+        "question": "The SQL statement used to retrieve data from a PostgreSQL table is:",
+        "options": [
+            "INSERT",
+            "UPDATE",
+            "SELECT",
+            "DELETE"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "SELECT is the Data Manipulation Language (DML) statement used to query data from a database."
+    },
+    {
+        "id": 88,
+        "question": "Which SQL JOIN clause returns all rows from the left table, and the matched rows from the right table?",
+        "options": [
+            "INNER JOIN",
+            "RIGHT JOIN",
+            "FULL OUTER JOIN",
+            "LEFT (OUTER) JOIN"
+        ],
+        "correctOptionIndex": 3,
+        "explanation": "A LEFT JOIN returns all records from the left table, and the matched records from the right table. The result is NULL from the right side, if there is no match."
+    },
+    {
+        "id": 89,
+        "question": "Which PostgreSQL feature allows you to define custom SQL logic that executes automatically before or after an INSERT, UPDATE, or DELETE operation?",
+        "options": [
+            "Views",
+            "Cursors",
+            "Triggers",
+            "Indexes"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "A Trigger is a named database object that is associated with a table, and it activates when a particular event (e.g., INSERT, UPDATE) occurs for the table."
+    },
+    {
+        "id": 90,
+        "question": "A stored query that serves as a virtual table in a relational database is known as a:",
+        "options": [
+            "Schema",
+            "Stored Procedure",
+            "View",
+            "Index"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "A View is a virtual table whose contents are defined by a query. It does not store data itself but displays data stored in other tables."
+    },
+    {
+        "id": 91,
+        "question": "The 'Phantom Read' anomaly is characterized by a transaction finding new rows when it re-runs a query. Which isolation level prevents this?",
+        "options": [
+            "READ COMMITTED",
+            "REPEATABLE READ",
+            "SERIALIZABLE",
+            "SNAPSHOT"
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "Phantom Reads are only fully prevented by the SERIALIZABLE isolation level, which ensures that concurrent transactions behave as if they were executed sequentially."
+    },
+    {
+        "id": 92,
+        "question": "What is the primary difference between Git and GitHub?",
+        "options": [
+            "Git is proprietary software, and GitHub is open-source.",
+            "Git is a cloud hosting service, and GitHub is a command-line tool.",
+            "Git is a local version control system, and GitHub is a platform for hosting Git repositories.",
+            "Git is used for large teams, and GitHub is for solo developers."
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "Git is the distributed version control system (the tool itself) that tracks changes. GitHub (or GitLab/Bitbucket) is a web-based service that provides hosting for Git repositories and collaboration features."
+    },
+    {
+        "id": 93,
+        "question": "Which Git command is used to safely undo a specific commit that has already been pushed to a remote repository?",
+        "options": [
+            "git reset --hard [commit]",
+            "git revert [commit]",
+            "git checkout [commit]",
+            "git clean -f"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "git revert creates a new commit that undoes the changes introduced in the target commit. It is safe for public history because it does not modify the existing history."
+    },
+    {
+        "id": 94,
+        "question": "When working with Git, what is the defining characteristic of a 'fast-forward' merge?",
+        "options": [
+            "It requires a merge commit and resolves conflicts manually.",
+            "It only works between branches that have diverged significantly.",
+            "It always uses the --no-ff flag to force a merge commit.",
+            "It moves the target branch pointer directly to the current branch's commit, creating no new commit."
+        ],
+        "correctOptionIndex": 3,
+        "explanation": "A fast-forward merge occurs when there is a linear path from the current branch tip to the commit being merged. Git simply moves the pointer forward without creating a dedicated merge commit."
+    },
+    {
+        "id": 95,
+        "question": "The three main conceptual states of a file in Git's workflow are: Modified, Committed, and...?",
+        "options": [
+            "Untracked",
+            "Staged",
+            "Ignored",
+            "Merged"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "The three states are: Modified (changes made but not tracked), Staged (marked to be committed), and Committed (safely stored in the local database)."
+    },
+    {
+        "id": 96,
+        "question": "How do you check which remote repositories your local Git repository is configured to interact with?",
+        "options": [
+            "git remote -v",
+            "git branches -r",
+            "git config --remotes",
+            "git show-remotes"
+        ],
+        "correctOptionIndex": 0,
+        "explanation": "git remote -v (for verbose) lists the short names of the remote repositories you have configured, along with the URLs they map to for fetching and pushing."
+    },
+    {
+        "id": 97,
+        "question": "What is the primary action performed by the git rebase command?",
+        "options": [
+            "It combines multiple commits into a single commit for a cleaner history.",
+            "It moves the head pointer back to a previous commit, deleting subsequent history.",
+            "It reapplies commits from one branch onto the tip of another branch.",
+            "It creates a mirror copy of the entire repository history."
+        ],
+        "correctOptionIndex": 2,
+        "explanation": "git rebase is used to integrate changes from one branch onto another by moving or combining a sequence of commits to a new base commit, often resulting in a linear history."
+    },
+    {
+        "id": 98,
+        "question": "What is the primary function of a 'Pull Request' (PR) on platforms like GitHub?",
+        "options": [
+            "To automatically merge code from one branch to another without review.",
+            "To request permission to fork a repository.",
+            "To notify the repository owner that you have finished working on a feature.",
+            "To propose changes and facilitate code review and discussion before merging."
+        ],
+        "correctOptionIndex": 3,
+        "explanation": "A Pull Request (or Merge Request on GitLab) is a mechanism for team members to review, discuss, and approve code changes before they are integrated into the main branch."
+    },
+    {
+        "id": 99,
+        "question": "Which command will discard all uncommitted local changes in the working directory and staging area, making them match the latest commit on the current branch?",
+        "options": [
+            "git checkout .",
+            "git reset --hard HEAD",
+            "git stash pop",
+            "git revert HEAD"
+        ],
+        "correctOptionIndex": 1,
+        "explanation": "git reset --hard HEAD is a destructive command that resets the staging area and the working directory to match the commit that HEAD points to, effectively discarding all local changes."
+    },
+    {
+        "id":100,
+        "question":"Do you believe that MERN STACK is harder than it's competitive stacks like Java Springboot, PHP or Pythong Django etc for developement?",
+        "options":[
+            "Python because it's used in AI/ML",
+            "Not Sure",
+            "SpringBoot is Complex to learn",
+            "I believe in JS Superiority"
+        ],
+        "correctOptionIndex":3,
+        "explanation":"Since you are here attempting this test and in this timeline, you can't escape JS. You're ok if you're Not Sure but option 1 and 3 are completely wrong."
+    }
+]
