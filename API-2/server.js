@@ -10,24 +10,7 @@ const require = createRequire(import.meta.url);
 const questions = require("./Questions.json");
 
 const app = express();
-const PORT = 3000;
-
-//cors part for deployed as well as local app
-// app.use(cors({
-//     origin: [
-//         // 1.  live Vercel/Netlify frontend URL 
-//         "https://quiz-api-one-chi.vercel.app/", 
-//         // 2.  local development port 
-//         "http://localhost:5173",
-//         "http://127.0.0.1:5173" 
-//     ],
-//     methods: "GET,HEAD,POST",
-//     credentials: true,
-//     allowedHeaders: ['Content-Type', 'Authorization'], // adding headers for preflight responses
-// }));
-
-app.use(cors());
-
+const PORT = process.env.PORT || 3000;
 
 // efficient shuffling algorithm (similar to Fisher-Yates)
 const getRandomSample = (arr, n) => {
@@ -43,7 +26,20 @@ const getRandomSample = (arr, n) => {
     return shuffled.slice(0, n);
 };
 
-app.use(cors());
+//cors part for deployed as well as local app
+app.use(cors({
+    origin: [
+        // 1.  live Vercel/Netlify frontend URL 
+        "https://quiz-api-one-chi.vercel.app/", 
+        // 2.  local development port 
+        "http://localhost:5173",
+        "http://127.0.0.1:5173" 
+    ],
+    methods: "GET,HEAD,POST",
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization'], // adding headers for preflight responses
+}));
+
 app.use(bodyParser.json());
 
 // --- API Endpoint: Get Random Questions for a Quiz Session ---
