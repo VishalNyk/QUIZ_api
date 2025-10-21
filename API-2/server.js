@@ -13,18 +13,20 @@ const app = express();
 const PORT = 3000;
 
 //cors part for deployed as well as local app
-app.use(cors({
-    origin: [
-        // 1.  live Vercel/Netlify frontend URL 
-        "https://quiz-api-one-chi.vercel.app/", 
-        // 2.  local development port 
-        "http://localhost:5173",
-        "http://127.0.0.1:5173" 
-    ],
-    methods: "GET,HEAD,POST",
-    credentials: true,
-    allowedHeaders: ['Content-Type', 'Authorization'], // adding headers for preflight responses
-}));
+// app.use(cors({
+//     origin: [
+//         // 1.  live Vercel/Netlify frontend URL 
+//         "https://quiz-api-one-chi.vercel.app/", 
+//         // 2.  local development port 
+//         "http://localhost:5173",
+//         "http://127.0.0.1:5173" 
+//     ],
+//     methods: "GET,HEAD,POST",
+//     credentials: true,
+//     allowedHeaders: ['Content-Type', 'Authorization'], // adding headers for preflight responses
+// }));
+
+app.use(cors());
 
 
 // efficient shuffling algorithm (similar to Fisher-Yates)
