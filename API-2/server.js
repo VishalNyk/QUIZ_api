@@ -29,7 +29,8 @@ const getRandomSample = (arr, n) => {
 //cors part for deployed as well as local app
 app.use(cors({
     origin: [
-        // 1.  live Vercel/Netlify frontend URL 
+        // 1.  live Vercel/Netlify frontend URL
+        "https://quiz-api-one-chi.vercel.app",
         "https://quiz-api-one-chi.vercel.app/", 
         // 2.  local development port 
         "http://localhost:5173",
